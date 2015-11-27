@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" ng-controller="appController">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="Content/loading-bar.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/font-awesome.min.css" rel="stylesheet" />
+    <link href="content/social-buttons.css" rel="stylesheet"/>
+
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-ui-router.js"></script>
+    <script src="Scripts/angular-local-storage.min.js"></script>
+    <script src="Scripts/loading-bar.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <script src="App/app.js"></script>
+    <script src="App/Controllers/appController.js"></script>
+    <script src="App/Controllers/accountListController.js"></script>
+    <script src="App/Controllers/homeController.js"></script>
+    <script src="App/Controllers/loginController.js"></script>
+
+    <script src="App/Services/accountService.js"></script>
+    <script src="App/Services/authInterceptorService.js"></script>
+</head>
+<body>
+    <div>
+        <a href="" ng-click="goto('home')">Home</a>
+        <a href="" ng-hide="hide(false)" ng-click="goto('accountList')">Accounts</a>
+        <a href="" ng-hide="hide(false)" ng-click="logout()">Logout</a>
+        <a href="" ng-hide="hide(true)" ng-click="login()">Login</a>
+        <label>{{globalData.userName}}</label>
+    </div>
+    <div class="container">
+        <div data-ui-view></div>
+    </div>
+</body>
+</html>

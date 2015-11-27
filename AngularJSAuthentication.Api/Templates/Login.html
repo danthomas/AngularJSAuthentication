@@ -1,0 +1,17 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <label>username: </label><input type="text" ng-model="model.username"/>
+    </div>
+    <div class="col-md-12">
+        <label>password: </label><input type="text" ng-model="model.password" />
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-primary" ng-click="login()">Login</button>
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-facebook btn-block" type="button" ng-click="authExternalProvider('Facebook')"><i class="fa fa-facebook"></i> | Facebook</button>
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-google-plus btn-block" type="button" ng-click="authExternalProvider('Google')"><i class="fa fa-google-plus"></i> | Google+</button>
+    </div>
+</div>
